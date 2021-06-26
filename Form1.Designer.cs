@@ -46,6 +46,16 @@ namespace ProjektMagazyn
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.grbxReceive = new System.Windows.Forms.GroupBox();
+            this.txbReceivePackID = new System.Windows.Forms.TextBox();
+            this.btAddReceive = new System.Windows.Forms.Button();
+            this.dtpReceivePack = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.grbxDelete = new System.Windows.Forms.GroupBox();
+            this.btRemovePack = new System.Windows.Forms.Button();
+            this.txbDeletePackID = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.grbxSend = new System.Windows.Forms.GroupBox();
             this.txbSendPackDestination = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -54,72 +64,70 @@ namespace ProjektMagazyn
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btAddSend = new System.Windows.Forms.Button();
-            this.grbxReceive = new System.Windows.Forms.GroupBox();
-            this.txbReceivePackID = new System.Windows.Forms.TextBox();
-            this.btAddReceive = new System.Windows.Forms.Button();
-            this.dtpReceivePack = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.btDelete = new System.Windows.Forms.Button();
-            this.grbxDelete = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txbDeletePackID = new System.Windows.Forms.TextBox();
-            this.btRemovePack = new System.Windows.Forms.Button();
+            this.lbStorageCapacity = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grbxOrder.SuspendLayout();
-            this.grbxSend.SuspendLayout();
             this.grbxReceive.SuspendLayout();
             this.grbxDelete.SuspendLayout();
+            this.grbxSend.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(245, 201);
+            this.dataGridView1.Location = new System.Drawing.Point(241, 201);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(751, 353);
+            this.dataGridView1.Size = new System.Drawing.Size(1186, 353);
             this.dataGridView1.TabIndex = 0;
             // 
             // btReceive
             // 
-            this.btReceive.Location = new System.Drawing.Point(12, 201);
+            this.btReceive.BackColor = System.Drawing.Color.YellowGreen;
+            this.btReceive.Location = new System.Drawing.Point(29, 201);
             this.btReceive.Name = "btReceive";
             this.btReceive.Size = new System.Drawing.Size(173, 45);
             this.btReceive.TabIndex = 1;
             this.btReceive.Text = "Odbierz Paczkę";
-            this.btReceive.UseVisualStyleBackColor = true;
+            this.btReceive.UseVisualStyleBackColor = false;
             this.btReceive.Click += new System.EventHandler(this.btReceive_Click);
             // 
             // btSend
             // 
-            this.btSend.Location = new System.Drawing.Point(12, 264);
+            this.btSend.BackColor = System.Drawing.Color.YellowGreen;
+            this.btSend.Location = new System.Drawing.Point(29, 263);
             this.btSend.Name = "btSend";
             this.btSend.Size = new System.Drawing.Size(173, 44);
             this.btSend.TabIndex = 2;
             this.btSend.Text = "Wyślij Paczkę";
-            this.btSend.UseVisualStyleBackColor = true;
+            this.btSend.UseVisualStyleBackColor = false;
             this.btSend.Click += new System.EventHandler(this.btSend_Click);
             // 
             // btOrder
             // 
-            this.btOrder.Location = new System.Drawing.Point(12, 325);
+            this.btOrder.BackColor = System.Drawing.Color.YellowGreen;
+            this.btOrder.Location = new System.Drawing.Point(29, 325);
             this.btOrder.Name = "btOrder";
             this.btOrder.Size = new System.Drawing.Size(173, 46);
             this.btOrder.TabIndex = 3;
             this.btOrder.Text = "Zamów paczkę";
-            this.btOrder.UseVisualStyleBackColor = true;
+            this.btOrder.UseVisualStyleBackColor = false;
             this.btOrder.Click += new System.EventHandler(this.btOrder_Click);
             // 
             // btShow
             // 
-            this.btShow.Location = new System.Drawing.Point(11, 450);
+            this.btShow.BackColor = System.Drawing.Color.YellowGreen;
+            this.btShow.Location = new System.Drawing.Point(28, 450);
             this.btShow.Name = "btShow";
             this.btShow.Size = new System.Drawing.Size(172, 46);
             this.btShow.TabIndex = 4;
             this.btShow.Text = "Wyświetl Magazyn";
-            this.btShow.UseVisualStyleBackColor = true;
+            this.btShow.UseVisualStyleBackColor = false;
             this.btShow.Click += new System.EventHandler(this.btShow_Click);
             // 
             // grbxOrder
@@ -183,12 +191,13 @@ namespace ProjektMagazyn
             // 
             // btAddOrder
             // 
+            this.btAddOrder.BackColor = System.Drawing.Color.SkyBlue;
             this.btAddOrder.Location = new System.Drawing.Point(437, 120);
             this.btAddOrder.Name = "btAddOrder";
             this.btAddOrder.Size = new System.Drawing.Size(94, 29);
             this.btAddOrder.TabIndex = 5;
             this.btAddOrder.Text = "Zamów";
-            this.btAddOrder.UseVisualStyleBackColor = true;
+            this.btAddOrder.UseVisualStyleBackColor = false;
             this.btAddOrder.Click += new System.EventHandler(this.btAddOrder_Click);
             // 
             // label5
@@ -236,6 +245,108 @@ namespace ProjektMagazyn
             this.label1.TabIndex = 0;
             this.label1.Text = "Nr Paczki";
             // 
+            // grbxReceive
+            // 
+            this.grbxReceive.Controls.Add(this.txbReceivePackID);
+            this.grbxReceive.Controls.Add(this.btAddReceive);
+            this.grbxReceive.Controls.Add(this.dtpReceivePack);
+            this.grbxReceive.Controls.Add(this.label10);
+            this.grbxReceive.Controls.Add(this.label9);
+            this.grbxReceive.Location = new System.Drawing.Point(11, 12);
+            this.grbxReceive.Name = "grbxReceive";
+            this.grbxReceive.Size = new System.Drawing.Size(286, 163);
+            this.grbxReceive.TabIndex = 7;
+            this.grbxReceive.TabStop = false;
+            this.grbxReceive.Text = "Odbierz Paczkę";
+            // 
+            // txbReceivePackID
+            // 
+            this.txbReceivePackID.Location = new System.Drawing.Point(126, 27);
+            this.txbReceivePackID.MaxLength = 4;
+            this.txbReceivePackID.Name = "txbReceivePackID";
+            this.txbReceivePackID.Size = new System.Drawing.Size(138, 27);
+            this.txbReceivePackID.TabIndex = 14;
+            this.txbReceivePackID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbReceivePackID_KeyPress);
+            // 
+            // btAddReceive
+            // 
+            this.btAddReceive.BackColor = System.Drawing.Color.SkyBlue;
+            this.btAddReceive.Location = new System.Drawing.Point(170, 128);
+            this.btAddReceive.Name = "btAddReceive";
+            this.btAddReceive.Size = new System.Drawing.Size(94, 29);
+            this.btAddReceive.TabIndex = 13;
+            this.btAddReceive.Text = "Odbierz";
+            this.btAddReceive.UseVisualStyleBackColor = false;
+            this.btAddReceive.Click += new System.EventHandler(this.btAddReceive_Click);
+            // 
+            // dtpReceivePack
+            // 
+            this.dtpReceivePack.CustomFormat = "yyyy-MM-dd";
+            this.dtpReceivePack.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpReceivePack.Location = new System.Drawing.Point(126, 72);
+            this.dtpReceivePack.Name = "dtpReceivePack";
+            this.dtpReceivePack.Size = new System.Drawing.Size(138, 27);
+            this.dtpReceivePack.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 77);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(115, 20);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Data Odebrania";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 20);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Nr Paczki";
+            // 
+            // grbxDelete
+            // 
+            this.grbxDelete.Controls.Add(this.btRemovePack);
+            this.grbxDelete.Controls.Add(this.txbDeletePackID);
+            this.grbxDelete.Controls.Add(this.label11);
+            this.grbxDelete.Location = new System.Drawing.Point(10, 12);
+            this.grbxDelete.Name = "grbxDelete";
+            this.grbxDelete.Size = new System.Drawing.Size(231, 157);
+            this.grbxDelete.TabIndex = 1;
+            this.grbxDelete.TabStop = false;
+            this.grbxDelete.Text = "Usuń Paczkę";
+            // 
+            // btRemovePack
+            // 
+            this.btRemovePack.BackColor = System.Drawing.Color.SkyBlue;
+            this.btRemovePack.Location = new System.Drawing.Point(65, 104);
+            this.btRemovePack.Name = "btRemovePack";
+            this.btRemovePack.Size = new System.Drawing.Size(101, 29);
+            this.btRemovePack.TabIndex = 2;
+            this.btRemovePack.Text = "Usuń paczkę";
+            this.btRemovePack.UseVisualStyleBackColor = false;
+            this.btRemovePack.Click += new System.EventHandler(this.btRemovePack_Click);
+            // 
+            // txbDeletePackID
+            // 
+            this.txbDeletePackID.Location = new System.Drawing.Point(82, 27);
+            this.txbDeletePackID.MaxLength = 4;
+            this.txbDeletePackID.Name = "txbDeletePackID";
+            this.txbDeletePackID.Size = new System.Drawing.Size(125, 27);
+            this.txbDeletePackID.TabIndex = 1;
+            this.txbDeletePackID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbDeletePackID_KeyPress);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 20);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Nr Paczki";
+            // 
             // grbxSend
             // 
             this.grbxSend.Controls.Add(this.txbSendPackDestination);
@@ -245,7 +356,7 @@ namespace ProjektMagazyn
             this.grbxSend.Controls.Add(this.label7);
             this.grbxSend.Controls.Add(this.label6);
             this.grbxSend.Controls.Add(this.btAddSend);
-            this.grbxSend.Location = new System.Drawing.Point(620, 12);
+            this.grbxSend.Location = new System.Drawing.Point(12, 12);
             this.grbxSend.Name = "grbxSend";
             this.grbxSend.Size = new System.Drawing.Size(283, 168);
             this.grbxSend.TabIndex = 6;
@@ -306,151 +417,87 @@ namespace ProjektMagazyn
             // 
             // btAddSend
             // 
+            this.btAddSend.BackColor = System.Drawing.Color.SkyBlue;
             this.btAddSend.Location = new System.Drawing.Point(135, 133);
             this.btAddSend.Name = "btAddSend";
             this.btAddSend.Size = new System.Drawing.Size(94, 29);
             this.btAddSend.TabIndex = 0;
             this.btAddSend.Text = "Wyślij";
-            this.btAddSend.UseVisualStyleBackColor = true;
+            this.btAddSend.UseVisualStyleBackColor = false;
             this.btAddSend.Click += new System.EventHandler(this.btAddSend_Click);
-            // 
-            // grbxReceive
-            // 
-            this.grbxReceive.Controls.Add(this.txbReceivePackID);
-            this.grbxReceive.Controls.Add(this.btAddReceive);
-            this.grbxReceive.Controls.Add(this.dtpReceivePack);
-            this.grbxReceive.Controls.Add(this.label10);
-            this.grbxReceive.Controls.Add(this.label9);
-            this.grbxReceive.Location = new System.Drawing.Point(273, 363);
-            this.grbxReceive.Name = "grbxReceive";
-            this.grbxReceive.Size = new System.Drawing.Size(286, 163);
-            this.grbxReceive.TabIndex = 7;
-            this.grbxReceive.TabStop = false;
-            this.grbxReceive.Text = "Odbierz Paczkę";
-            // 
-            // txbReceivePackID
-            // 
-            this.txbReceivePackID.Location = new System.Drawing.Point(126, 27);
-            this.txbReceivePackID.MaxLength = 4;
-            this.txbReceivePackID.Name = "txbReceivePackID";
-            this.txbReceivePackID.Size = new System.Drawing.Size(138, 27);
-            this.txbReceivePackID.TabIndex = 14;
-            this.txbReceivePackID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbReceivePackID_KeyPress);
-            // 
-            // btAddReceive
-            // 
-            this.btAddReceive.Location = new System.Drawing.Point(170, 128);
-            this.btAddReceive.Name = "btAddReceive";
-            this.btAddReceive.Size = new System.Drawing.Size(94, 29);
-            this.btAddReceive.TabIndex = 13;
-            this.btAddReceive.Text = "Odbierz";
-            this.btAddReceive.UseVisualStyleBackColor = true;
-            this.btAddReceive.Click += new System.EventHandler(this.btAddReceive_Click);
-            // 
-            // dtpReceivePack
-            // 
-            this.dtpReceivePack.CustomFormat = "yyyy-MM-dd";
-            this.dtpReceivePack.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpReceivePack.Location = new System.Drawing.Point(126, 72);
-            this.dtpReceivePack.Name = "dtpReceivePack";
-            this.dtpReceivePack.Size = new System.Drawing.Size(138, 27);
-            this.dtpReceivePack.TabIndex = 12;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 77);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(115, 20);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Data Odebrania";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 20);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Nr Paczki";
             // 
             // btDelete
             // 
-            this.btDelete.Location = new System.Drawing.Point(12, 389);
+            this.btDelete.BackColor = System.Drawing.Color.YellowGreen;
+            this.btDelete.Location = new System.Drawing.Point(29, 389);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(173, 45);
             this.btDelete.TabIndex = 8;
             this.btDelete.Text = "Usuń paczkę";
-            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.UseVisualStyleBackColor = false;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
-            // grbxDelete
+            // lbStorageCapacity
             // 
-            this.grbxDelete.Controls.Add(this.btRemovePack);
-            this.grbxDelete.Controls.Add(this.txbDeletePackID);
-            this.grbxDelete.Controls.Add(this.label11);
-            this.grbxDelete.Location = new System.Drawing.Point(655, 363);
-            this.grbxDelete.Name = "grbxDelete";
-            this.grbxDelete.Size = new System.Drawing.Size(231, 157);
-            this.grbxDelete.TabIndex = 9;
-            this.grbxDelete.TabStop = false;
-            this.grbxDelete.Text = "Usuń Paczkę";
+            this.lbStorageCapacity.AutoSize = true;
+            this.lbStorageCapacity.Location = new System.Drawing.Point(117, 519);
+            this.lbStorageCapacity.Name = "lbStorageCapacity";
+            this.lbStorageCapacity.Size = new System.Drawing.Size(65, 20);
+            this.lbStorageCapacity.TabIndex = 9;
+            this.lbStorageCapacity.Text = "##/1000";
             // 
-            // label11
+            // label12
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 27);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 20);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Nr Paczki";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(28, 519);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 20);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "Pojemność:";
             // 
-            // txbDeletePackID
+            // pictureBox1
             // 
-            this.txbDeletePackID.Location = new System.Drawing.Point(82, 27);
-            this.txbDeletePackID.MaxLength = 4;
-            this.txbDeletePackID.Name = "txbDeletePackID";
-            this.txbDeletePackID.Size = new System.Drawing.Size(125, 27);
-            this.txbDeletePackID.TabIndex = 1;
-            this.txbDeletePackID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbDeletePackID_KeyPress);
-            // 
-            // btRemovePack
-            // 
-            this.btRemovePack.Location = new System.Drawing.Point(65, 104);
-            this.btRemovePack.Name = "btRemovePack";
-            this.btRemovePack.Size = new System.Drawing.Size(101, 29);
-            this.btRemovePack.TabIndex = 2;
-            this.btRemovePack.Text = "Usuń paczkę";
-            this.btRemovePack.UseVisualStyleBackColor = true;
-            this.btRemovePack.Click += new System.EventHandler(this.btRemovePack_Click);
+            this.pictureBox1.Image = global::ProjektMagazyn.Properties.Resources.paperbox;
+            this.pictureBox1.Location = new System.Drawing.Point(1141, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(228, 168);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 566);
+            this.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.ClientSize = new System.Drawing.Size(1439, 566);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lbStorageCapacity);
+            this.Controls.Add(this.grbxReceive);
             this.Controls.Add(this.grbxDelete);
             this.Controls.Add(this.btDelete);
-            this.Controls.Add(this.grbxReceive);
             this.Controls.Add(this.grbxSend);
-            this.Controls.Add(this.grbxOrder);
             this.Controls.Add(this.btShow);
             this.Controls.Add(this.btOrder);
             this.Controls.Add(this.btSend);
             this.Controls.Add(this.btReceive);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.grbxOrder);
             this.Name = "Form1";
             this.Text = "Zarządzanie Magazynem";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.grbxOrder.ResumeLayout(false);
             this.grbxOrder.PerformLayout();
-            this.grbxSend.ResumeLayout(false);
-            this.grbxSend.PerformLayout();
             this.grbxReceive.ResumeLayout(false);
             this.grbxReceive.PerformLayout();
             this.grbxDelete.ResumeLayout(false);
             this.grbxDelete.PerformLayout();
+            this.grbxSend.ResumeLayout(false);
+            this.grbxSend.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -492,6 +539,9 @@ namespace ProjektMagazyn
         private System.Windows.Forms.Button btRemovePack;
         private System.Windows.Forms.TextBox txbDeletePackID;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbStorageCapacity;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

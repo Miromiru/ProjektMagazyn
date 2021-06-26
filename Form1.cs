@@ -21,6 +21,8 @@ namespace ProjektMagazyn
             grbxSend.Visible = false;
             grbxOrder.Visible = false;
             grbxDelete.Visible = false;
+            StorageCapacity();
+            if (storageVolume > 1000) { btReceive.Enabled = false; } else {btReceive.Enabled = true;}
         }
 
         private void btReceive_Click(object sender, EventArgs e)
@@ -58,13 +60,15 @@ namespace ProjektMagazyn
         private void btShow_Click(object sender, EventArgs e)
         {
             czytaj();
+            StorageCapacity();
+            if (storageVolume > 1000) { btReceive.Enabled = false; } else { btReceive.Enabled = true; }
         }
 
 
 
-        public void czytaj()
+        private void czytaj()
         {
-            var select = "SELECT * FROM paczka";
+            var select = "SELECT * FROM paczka ORDER BY czasZamowienia DESC, czasOdebrania DESC, czasWyslania DESC";
             var c = new SqlConnection(@"Data Source=LAPTOP-HK5PHBI7;Initial Catalog=MagazynDB;Integrated Security=True;");
             var dataAdapter = new SqlDataAdapter(select, c);
 
@@ -155,6 +159,32 @@ namespace ProjektMagazyn
             {
                 e.Handled = true;
             }
+        }
+
+        public int storageVolume { get; set; }
+        protected void StorageCapacity()
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-HK5PHBI7;Initial Catalog=MagazynDB;Integrated Security=True;");
+            string sql = "Select sum(wielkoscPaczki) From paczka where stan='Odebrana'";
+
+            SqlCommand cmd = new SqlCommand(sql, con);
+            con.Open();
+            SqlDataReader rd = cmd.ExecuteReader();
+
+            try
+            {
+                if (rd.HasRows)
+                {
+                    rd.Read();
+                    var storageSize = rd.GetInt32(0);
+                    lbStorageCapacity.Text = storageSize.ToString() + "/1000 m³";
+                    storageVolume = storageSize;
+                    
+                }
+            }
+            catch { lbStorageCapacity.Text = "00/1000 m³"; }
+
+            con.Close();
         }
     }
 }
