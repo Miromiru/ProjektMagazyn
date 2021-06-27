@@ -83,7 +83,7 @@ namespace ProjektMagazyn
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(1186, 353);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 353);
             this.dataGridView1.TabIndex = 0;
             // 
             // btReceive
@@ -458,7 +458,7 @@ namespace ProjektMagazyn
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProjektMagazyn.Properties.Resources.paperbox;
-            this.pictureBox1.Location = new System.Drawing.Point(1141, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(882, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(228, 168);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -470,7 +470,7 @@ namespace ProjektMagazyn
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.ClientSize = new System.Drawing.Size(1439, 566);
+            this.ClientSize = new System.Drawing.Size(1112, 566);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lbStorageCapacity);
